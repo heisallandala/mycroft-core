@@ -9,6 +9,7 @@ pipeline {
     stages {
         // Run the build in the against the dev branch to check for compile errors
         stage('Add CLA label to PR') {
+<<<<<<< HEAD
             when {
                 anyOf {
                     changeRequest target: 'dev'
@@ -17,6 +18,8 @@ pipeline {
             options {
                 lock(resource: "lock_${env.JOB_NAME}")
             }
+=======
+>>>>>>> 79290c5db02... Run CLA check on all branches
             environment {
                 //spawns GITHUB_USR and GITHUB_PSW environment variables
                 GITHUB=credentials('38b2e4a6-167a-40b2-be6f-d69be42c8190')
