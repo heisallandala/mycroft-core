@@ -68,7 +68,11 @@ def mock_config(temp_dir):
             upload_skill_manifest=True
         ),
         data_dir=str(temp_dir),
-        enclosure=dict()
+        enclosure=dict(),
+        server=dict(
+            metrics=False,
+            sync_skill_settings=True
+        )
     )
 
     return get_config_mock
